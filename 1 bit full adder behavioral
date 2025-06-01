@@ -1,0 +1,11 @@
+module bit_full_adder(
+	input a,b,Cin,
+  output reg s,Cout
+);
+  always@(a or b or Cin)
+    begin
+      {Cout,s}=a+b+Cin;
+    end  
+      
+  
+  endmodule
