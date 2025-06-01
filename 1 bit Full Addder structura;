@@ -1,0 +1,13 @@
+module bit_full_adder(
+	input a,b,Cin,
+  output s,Cout
+);
+  wire n1,n2,n3;
+  xor (n1,a,b);
+  and (n2,a,b);
+  and (n3,Cin,n1);
+  
+  xor(s,n1,Cin);
+  or(Cout,n2,n3);
+  
+  endmodule
